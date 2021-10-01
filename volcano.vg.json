@@ -3,9 +3,9 @@
     "width": 800,
     "height": 500,
     "config": {
-      "background":"#0C2340"
+      "background":"#E8E9F3"
     },
-    "title": "worldmap of tsunamis in recorded history with tectonic plate boundary overlay",
+    "title": "title",
     "projection": {"type": "equalEarth"},
     "layer": [
       {
@@ -13,32 +13,32 @@
           "url": "https://raw.githubusercontent.com/KaneSec/vega_lite/main/2_symbol_map/js/ne_110m_admin_0_countries.topojson",
           "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
         },
-        "mark": {"type": "geoshape", "fill": "#5D76A9", "stroke": "#B0C4DE"}
+        "mark": {"type": "geoshape", "fill": "#A6A6A8", "stroke": "#A6A6A8"}
       },
       {
         "data": {
-          "url":"https://raw.githubusercontent.com/LucaBernardiProjects/Monash_FIT_3179/main/topojson_plates.topojson",
+          "url":"https://raw.githubusercontent.com/LucaBernardiProjects/FIT3179_A2/master/topojson_plates.topojson",
           "format": {"type": "topojson", "feature":"PB2002_boundaries (1)"}
         },
-        "mark": {"type": "geoshape", "fill": "white", "stroke": "grey", "fillOpacity" : 0}
+        "mark": {"type": "geoshape", "fill": "black", "stroke": "#272635", "fillOpacity" : 0}
       },
       {
         "data": {
-          "url": "https://raw.githubusercontent.com/LucaBernardiProjects/Monash_FIT_3179/main/tsunami_dataset.csv"
+          "url": "https://raw.githubusercontent.com/LucaBernardiProjects/FIT3179_A2/master/volcano.csv"
         },
         "mark": {"type": "circle", "tooltip": {"content": "data"}},
         "encoding": {
-          "longitude": {"field": "LONGITUDE", "type": "quantitative"},
-          "latitude": {"field": "LATITUDE", "type": "quantitative"},
+          "longitude": {"field": "Longitude", "type": "quantitative"},
+          "latitude": {"field": "Latitude", "type": "quantitative"},
           "size": {
-            "field": "TS_INTENSITY",
+            "field": "PEI",
             "type": "quantitative",
             "scale": {"domain": [0, 10]}
           },
           "color": {
-            "field": "EQ_MAGNITUDE",
+            "field": "PEI",
             "type": "quantitative",
-            "scale": {"scheme": "blues"}
+            "scale": {"scheme": "oranges"}
           }
         }
       }
