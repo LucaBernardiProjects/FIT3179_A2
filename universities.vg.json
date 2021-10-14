@@ -1,7 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 500,
-  "height": 300,
+  "width": 800,
+  "height": 400,
+  "background" : "#DCE1DE",
   "layer": [
     {
       "data": {
@@ -16,13 +17,13 @@
       },
       "mark": {
         "type": "geoshape",
-        "fill": "lightgray",
-        "stroke": "white"
+        "fill": "#DCE1DE",
+        "stroke": "#1F2421"
       }
     },
     {
       "data": {
-        "url": ""
+        "url": "https://raw.githubusercontent.com/LucaBernardiProjects/FIT3179_A2/master/Colleges_and_Universities.csv"
       },
       "projection": {
         "type": "albersUsa"
@@ -30,15 +31,15 @@
       "mark": "circle",
       "encoding": {
         "longitude": {
-          "field": "x",
+          "field": "X",
           "type": "quantitative"
         },
         "latitude": {
-          "field": "y",
+          "field": "Y",
           "type": "quantitative"
         },
-        "size": {"value": 10},
-        "color": {"value": "black"}
+        "size": {"value": 15},
+        "color": {"value": "#49A078"}
       }
     }
   ]
