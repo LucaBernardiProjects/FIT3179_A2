@@ -12,7 +12,7 @@
         "lookup": "properties.NAME",
         "from": {
           "data": {
-            "url": "https://raw.githubusercontent.com/LucaBernardiProjects/FIT3179_A2/master/earliest_universities.csv"
+            "url": "https://raw.githubusercontent.com/LucaBernardiProjects/FIT3179_A2/master/Data/earliest_universities.csv"
           },
           "key": "Country",
           "fields": ["Year"]
