@@ -12,7 +12,7 @@
       "lookup": "properties.NAME",
       "from": {
         "data": {
-          "url": "https://raw.githubusercontent.com/LucaBernardiProjects/FIT3179_A2/master/Data/book2.csv"
+          "url": "https://raw.githubusercontent.com/LucaBernardiProjects/FIT3179_A2/master/Data/country_alpha2code.csv"
         },
         "key": "Country",
         "fields": ["Count"]

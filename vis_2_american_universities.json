@@ -24,7 +24,7 @@
     {
       
       "data": {
-        "url": "https://raw.githubusercontent.com/LucaBernardiProjects/FIT3179_A2/master/Colleges_and_Universities.csv"
+        "url": "https://raw.githubusercontent.com/LucaBernardiProjects/FIT3179_A2/master/Data/Colleges_and_Universities.csv"
       },
       "projection": {
         "type": "albersUsa"
