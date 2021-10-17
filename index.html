@@ -2,16 +2,53 @@
 <html lang="en">
 <head>
 <style>
-    div {
-        background-color: #F8F8F8;
-        padding-top: 10px;
-        padding-right: 30px;
-        padding-bottom: 10;
-        padding-left: 80px;
-    }   
+   .body {
+        font-family: 'Source Sans Pro', sans-serif;
+    }
 
-    div.a {
-        text-indent: 50px;
+    h1 {
+        font-weight: 900;
+        color: dimgray;
+    }
+
+    body {
+        background-color: gainsboro;
+        color: dimgray;
+    }
+
+    .page {
+        width: 850px;
+        border: 3.14159265359px solid dimgray;
+        background-color: whitesmoke;
+        margin: auto;
+        padding: 50px;
+        padding-top: 35px;
+    }
+
+    .vis-container {
+        border: 1 solid dimgray;
+        width: 100%;
+    }
+
+    .description h2,
+    h1 {
+        margin-top: 0px;
+    }
+
+    .description-right {
+        padding-left: 20px;
+    }
+
+    .description-left {
+        padding-right: 20px;
+    }
+
+    .pure-g {
+        margin-bottom: 25px;
+    }
+
+    .small-font {
+        font-size: 14px;
     }
 </style>
 
@@ -41,7 +78,7 @@
         <div class="pure-g">
             <div class="pure-u-1-1">
             <h1>A history of higher Education</h1>
-            <p>Universities - Past, Present, Future</p>
+            <h2>Universities - Past, Present, Future</h2>
             </div>
         </div>
         <!-- end pure grid group -->
@@ -50,9 +87,9 @@
         <div class="pure-g">
             <div class="pure-u-1-3">
             <div class="description description-left">
-                <h2>This is the first section</h2>
-                <p>The first column is used for description while the next two columns are merged and used for visualisation. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. </p>
-            </div>
+                <h2>The first Universities</h2>
+                <p>The first recorded universities were situated in europe primarily in central europe predominantly in Italy which at the time was at the heart of the Holy Roman Empire, and England where the culture around higher education grew out of their strong theological influences. The first of these early universities was the University of Bologna in northern Italy.</p>
+                </div>
             </div>
             <div class="pure-u-2-3">
             <div id="viz1" class="vis-container"></div>
@@ -67,11 +104,71 @@
             </div>
             <div class="pure-u-1-3">
             <div class="description description-right">
-                <h2>This is the second section</h2>
-                <p>Similar to the previous section, but the colum partition is swapped. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. Egestas purus viverra accumsan in nisl.</p>
+                <h2>Colonialist Expansion</h2>
+                <p>As countries like England and Spain expanded their sphere of influence and slaughtered and enslaved the indigenous peoples of the Americas, Africa, Asia and Oceania they brought science and education with them. First in the Americas and later in the rest of the world universities were founded.</p>
             </div>
         </div>
-      
+
+        <!-- pure grid group -->
+        <div class="pure-g">
+            <div class="pure-u-1-3">
+            <div class="description description-left">
+                <h2>The current State</h2>
+                <p>Nowadays every major country in the world is home to at least one university with the exception of Antarctica. The United States have overtaken everyone else sporting an impressive 2000+ institutions of higher education with national recognition.</p>
+            </div>
+            </div>
+            <div class="pure-u-2-3">
+            <div id="viz3" class="vis-container"></div>
+            </div>
+        </div>
+        <!-- end pure grid group -->
+        
+        <!-- pure grid group -->
+        <div class="pure-g">
+            <div class="pure-u-2-3">
+            <div id="viz4"  class="vis-container"></div>
+            </div>
+            <div class="pure-u-1-3">
+            <div class="description description-right">
+                <h2>The United States</h2>
+                <p>With a grand total of over 2000 accredited Universities and insitituations of higher education some states in the US got more Universities than many other countries. They are also home to 8 out of the 10 highest ranked Universities in the world. They are also world leaders in average tuition.</p>
+            </div>
+        </div>
+
+                <!-- pure grid group -->
+        <div class="pure-g">
+            <div class="pure-u-1-3">
+            <div class="description description-left">
+                <h2>Education & Population</h2>
+                <p>In this section you can explore how countries with booming populations like China and India deal with the increasing need for higher education as more and more people see their path out of poverty in a higher education. As more jobs with low entry requirements are made obsulete by machines a higher education secures peoples future.</p>
+            </div>
+            </div>
+            <div class="pure-u-2-3">
+            <div id="viz5" class="vis-container"></div>
+            </div>
+        </div>
+        <!-- end pure grid group -->
+
+        <!-- pure grid group -->
+        <div class="pure-g">
+            <div class="pure-u-2-3">
+            <div id="viz6"  class="vis-container"></div>
+            </div>
+            <div class="pure-u-1-3">
+            <div class="description description-right">
+                <h2>Exploring the Past & Future</h2>
+                <p>Our need for education has exploded since the 1800. What is next? As this overview of higher education comes to a close feel free to explore how Universities spread over the globe in this interactive visualisation. </p>
+                </div>
+        </div>
+
+        <!-- pure grid group -->
+        <div class="pure-g">
+            <div class="pure-u-1-1">
+            <p>Prepared by: Luca Bernardi, for: Monash University, Data Visualisation 2021</p>
+            </div>
+        </div>
+        <!-- end pure grid group -->
+
     </div>
     <!-- end pure grid group -->
 
@@ -79,12 +176,27 @@
 
 <script type="text/javascript">
     var viz1 = "./vis_map_pre1500.json";
-    var viz2 = "./vis_america.json"
+    var viz2 = "./vis_earliest_perCountry.json"
 
     vegaEmbed('#viz1', viz1, {"actions": false});
     
     vegaEmbed('#viz2', viz2, {"actions": false}).then(function(result) {
-        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    var viz3 = "./vis_map_world_unis_current.json";
+    var viz4 = "./vis_america.json"
+
+    vegaEmbed('#viz3', viz3, {"actions": false});
+    
+    vegaEmbed('#viz4', viz4, {"actions": false}).then(function(result) {
+    }).catch(console.error);
+
+    var viz5= "./vis_scatter_num_by_pop.json";
+    var viz6 = "./vis_scatter_region_students.json"
+
+    vegaEmbed('#viz5', viz5, {"actions": false});
+    
+    vegaEmbed('#viz6', viz6, {"actions": false}).then(function(result) {
     }).catch(console.error);
 
     </script>

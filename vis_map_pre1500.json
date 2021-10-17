@@ -1,8 +1,8 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "title": "Earliest Universities pre 1500",
-    "width": 500,
-    "height": 300,
+    "width": "container",
+    "background":"whitesmoke",
     "layer": [
       {
       "data": {

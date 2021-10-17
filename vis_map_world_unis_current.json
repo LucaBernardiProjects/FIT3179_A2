@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "universities count by country (current)",
-  "width": 800,
-  "height": 600,
+  "title": "Universities by Country (current)",
+  "width": "container",
+  "background":"whitesmoke",
     "layer": [
     {
   "data": {

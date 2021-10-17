@@ -1,12 +1,12 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 800,
-  "height": 400,
-    "title":"Universities in America",
+  "width": "container",
+  "background":"whitesmoke",
+  "title":"Universities in America",
   "layer": [
     {
       "data": {
-        "url": "data/us-10m.json",
+        "url": "https://raw.githubusercontent.com/vega/vega/master/docs/data/us-10m.json",
         "format": {
           "type": "topojson",
           "feature": "states"
@@ -39,7 +39,7 @@
           "field": "Y",
           "type": "quantitative"
         },
-        "size": {"value": 15},
+        "size": {"value": 5},
         "color": {"value": "#9a9ae1"},
         "tooltip": [
             {"field": "NAME", "type": "nominal", "title": "University"},
