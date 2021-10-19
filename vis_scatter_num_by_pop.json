@@ -13,14 +13,40 @@
       "bind": {
         "input": "range",
         "min": 0,
-        "max": 100000000,
-        "step": 1000000,
+        "max": 1000000000,
+        "step": 100000,
         "name": "Minimum Population: "
+      }
+    },
+    {
+      "name": "Continent_selection",
+      "bind": {
+        "input": "select",
+        "options": [
+          null,
+          "Americas",
+          "Asia",
+          "Africa",
+          "Europe",
+          "Oceania"
+        ],
+        "labels": [
+          "Show All",
+          "Americas",
+          "Asia",
+          "Africa",
+          "Europe",
+          "Oceania"
+        ],
+        "name": "Continent Selection: "
       }
     }
   ],
   "transform": [
-    {"filter": "datum.Population > Population_Above"}
+    {"filter": "datum.Population > Population_Above"},
+    {
+      "filter": "Continent_selection == null || datum.Region == Continent_selection"
+    }
   ],
   "encoding": {
     "x": {

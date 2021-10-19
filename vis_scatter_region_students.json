@@ -17,10 +17,36 @@
         "step": 10,
         "name": "year: "
       }
+    },
+    {
+      "name": "Continent_selection",
+      "bind": {
+        "input": "select",
+        "options": [
+          null,
+          "Americas",
+          "Asia",
+          "Africa",
+          "Europe",
+          "Oceania"
+        ],
+        "labels": [
+          "Show All",
+          "Americas",
+          "Asia",
+          "Africa",
+          "Europe",
+          "Oceania"
+        ],
+        "name": "Continent Selection: "
+      }
     }
   ],
   "transform": [
-    {"filter": "datum.established < year_selection"}
+    {"filter": "datum.established < year_selection"},
+    {
+      "filter": "Continent_selection == null || datum.region == Continent_selection"
+    }
   ],
   "encoding": {
     "x": {
@@ -69,12 +95,12 @@
               "#ba83ca",
               "#9a9ae1",
               "#79b3f4",
-              "#52cffe",
-              "#46eefa"
+              "#52cffe"
             ]
           }
         },
         "tooltip": [
+          {"field": "university", "type": "nominal"},
           {"field": "country", "type": "nominal"},
           {"field": "numstudents", "type": "quantitative", "format": ","},
            {"field": "established", "type": "quantitative", "format": ","}
